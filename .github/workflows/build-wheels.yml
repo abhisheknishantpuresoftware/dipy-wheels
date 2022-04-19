@@ -159,7 +159,7 @@ jobs:
           echo "------- INSTALL_RUN --------"
           install_run $PLAT
         fi
-    - name: Upload as articats
+    - uses: actions/upload-artifact@v3
       if: startsWith(matrix.platform,'aarch64')
       with:
         name: my-artifact
