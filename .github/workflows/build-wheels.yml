@@ -231,8 +231,13 @@ jobs:
       with:
        name: my-artifact
     
+    - name: Copy to wheelhouse
+      run: |
+        mkdir wheelshouse
+        cp -r dipy-*manylinux2014_aarch64.whl wheelhouse/
+
     - name: Display structure of downloaded files
-      run: ls -R
+      run: ls -l wheelhouse/
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
