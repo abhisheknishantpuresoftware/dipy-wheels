@@ -233,7 +233,7 @@ jobs:
     
     - name: Copy to wheelhouse
       run: |
-        mkdir wheelshouse
+        mkdir wheelhouse
         cp -r dipy-*manylinux2014_aarch64.whl wheelhouse/
 
     - name: Display structure of downloaded files
